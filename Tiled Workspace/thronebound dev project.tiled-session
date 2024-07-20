@@ -1,0 +1,21 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+    },
+    "last.imagePath": "C:/Users/Aidan/IdeaProjects/ThroneBound/Tiled Workspace",
+    "map.fixedSize": false,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": "3",
+    "openFiles": [
+    ],
+    "project": "thronebound dev project.tiled-project",
+    "recentFiles": [
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}
