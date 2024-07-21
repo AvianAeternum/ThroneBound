@@ -1,3 +1,4 @@
+import 'package:flame/cache.dart';
 import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:flame/game.dart';
@@ -29,7 +30,7 @@ class ThroneboundGame extends FlameGame<ThroneboundWorld> with KeyboardEvents {
 
   @override
   Future<void> onLoad() async {
-    mapComponent = await TiledComponent.load('island.tmx', Vector2.all(32));
+    mapComponent = await loadMap("test");
     camera.viewfinder
       ..zoom = zoom
       ..anchor = Anchor.center;
@@ -74,4 +75,10 @@ class ThroneboundGame extends FlameGame<ThroneboundWorld> with KeyboardEvents {
     this.keysPressed = keysPressed;
     return KeyEventResult.ignored;
   }
+
+  Future<TiledComponent> loadMap(String mapName) => TiledComponent.load(
+      prefix: 'assets/world/map/',
+      '$mapName.tmx',
+      images: Images(prefix: 'assets/world/tileset/'),
+      Vector2.all(32));
 }
